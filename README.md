@@ -10,7 +10,7 @@ A reproducibility statement is provided in [`docs/ctmGP_reproducibility_statemen
 
 ## Scope
 
-The synthetic studies of the manuscript are reported in its Supplementary Material (Section S1, Figures S3-S5). This repository provides the source code and data for those studies.
+The synthetic studies of the manuscript are reported in its Supplementary Material (Section S2, Figures S3-S5). This repository provides the source code and data for those studies.
 
 Included:
 
