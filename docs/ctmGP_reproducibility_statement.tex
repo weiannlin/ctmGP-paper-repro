@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=black
+}
+
+\setlist[itemize]{leftmargin=1.5em}
+
+\begin{document}
+
+\begin{center}
+{\Large Reproducibility Statement}\\[0.75em]
+{\large Multi-Objective Bayesian Optimization of CPU Cooling Design with Mixed Variables Using a Category Tree Multivariate Gaussian Process}\\[0.5em]
+Wei-Ann Lin, Chih-Li Sung, Chia-Ling Cheng, and Ray-Bing Chen\\
+2026
+\end{center}
+
+\section*{Overview}
+
+The public reproduction material for this manuscript is available at:
+
+\begin{center}
+\url{https://github.com/weiannlin/ctmGP-repro}
+\end{center}
+
+The repository covers only the fixed manuscript version. It is not the development repository for the \texttt{ctGP} or \texttt{ctmGP} packages. It contains the source code and processed results needed to reproduce the synthetic studies reported in the Supplementary Material of the manuscript (Section S1, Figures S3--S5).
+
+The repository README documents the software requirements, the quick-verification commands, the expected output filenames, and the boundary between the redistributable synthetic results and the proprietary engineering inputs of the case studies.
+
+\section*{Included Materials}
+
+The repository includes:
+\begin{itemize}
+  \item fixed source tarballs for \texttt{ctGP} and \texttt{ctmGP}, both version 0.1.16.1;
+  \item scripts for installing the required R packages and local package tarballs;
+  \item scripts and processed results for the synthetic emulation RMSE study in Figure S3;
+  \item scripts and the complete synthetic Bayesian optimization trace archive behind Figures S4 and S5, consisting of 24 configurations, 100 replications per configuration, and 30 Bayesian optimization iterations per replication;
+  \item scripts for regenerating the synthetic IGD$^+$ figures.
+\end{itemize}
+
+The reproduction does not require \texttt{globpso}.
+
+\section*{Software Requirements}
+
+The reproduction uses R and a platform-appropriate C/C++ toolchain for installing source packages. The installation script obtains \texttt{Rcpp}, \texttt{RcppArmadillo}, \texttt{ggplot2}, \texttt{patchwork}, and \texttt{lhs} from CRAN, then installs the fixed \texttt{ctGP} and \texttt{ctmGP} source tarballs included in the repository. Python is not required.
+
+\section*{Basic Reproduction Steps}
+
+From the repository root, install the required dependencies with:
+
+\begin{verbatim}
+Rscript scripts/install_dependencies.R
+\end{verbatim}
+
+To regenerate the synthetic emulation RMSE figure from the included results:
+
+\begin{verbatim}
+Rscript scripts/plot_emulation_rmse.R
+\end{verbatim}
+
+To regenerate the synthetic BO trajectory figures from the included traces:
+
+\begin{verbatim}
+Rscript scripts/plot_synthetic_bo.R
+\end{verbatim}
+
+These quick-verification commands produce Figures S3--S5 of the Supplementary Material under the \texttt{figures/} directory. A separate script, \texttt{scripts/plot\_synthetic\_timing.R}, produces an additional acquisition-time diagnostic of the synthetic BO runs that does not appear in the manuscript or its Supplementary Material.
+
+The synthetic emulation and Bayesian optimization studies can also be rerun from scratch using the scripts provided in the repository. The full Bayesian optimization rerun is computationally expensive, so the repository also includes the trace archive used to generate the figures.
+
+\section*{Data Availability for Section 4}
+
+The case-study data in Section 4 of the manuscript were generated using commercial engineering software under confidentiality and licensing restrictions. Following these restrictions, the public reproduction repository does not include the data or scripts of the two case studies.
+
+\end{document}

@@ -1,0 +1,5 @@
+This reproduction package is distributed for academic review and reproducibility of the associated manuscript.
+
+The included `ctGP` and `ctmGP` source tarballs are licensed under GPL-3, as stated in their package DESCRIPTION files.
+
+The case-study data of Section 4 of the manuscript were generated under commercial engineering software confidentiality restrictions; neither these data nor the scripts of the two case studies are included or redistributed under this repository.

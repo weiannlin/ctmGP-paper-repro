@@ -1,0 +1,15 @@
+.DS_Store
+.Rhistory
+.RData
+Rplots.pdf
+.Rproj.user/
+*.rds
+*.RDS
+outputs/
+packages/Rlib/
+docs/*.aux
+docs/*.fdb_latexmk
+docs/*.fls
+docs/*.log
+docs/*.out
+dist/
