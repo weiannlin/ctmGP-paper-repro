@@ -4,7 +4,7 @@ This repository contains the public reproduction material for Lin, Sung, Cheng, 
 
 The repository covers only the fixed manuscript version. It is not the development repository for `ctGP` or `ctmGP`.
 
-Repository: <https://github.com/weiannlin/ctmGP-repro>
+Repository: <https://github.com/weiannlin/ctmGP-paper-repro>
 
 A reproducibility statement is provided in [`docs/ctmGP_reproducibility_statement.pdf`](docs/ctmGP_reproducibility_statement.pdf).
 
